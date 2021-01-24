@@ -1,9 +1,58 @@
 <!doctype html>
 <html>
   <head>
-    <title>This is the title of the webpage!</title>
+    <title>Comparing Jest and Mocha</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   </head>
   <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
+    <h1 style="font-size: 50px">Comparing Mocha and Jest</h1>
+    <div>
+      <h3 style="font-size: 30px">Mocha</h3>
+      <div style="font-size: 15px">
+          <div style="margin-top: 10px">+ устанавливается в 1 команду</div>
+          <div>+ удобный синтаксис для описания тестов</div>
+          <div>+ не требует много зависимостей</div>
+          <div>+ не нужны никакие конфиги</div>
+          <div>+ assert</div>
+
+          <div  style="margin-top: 20px">- пытается запустить всё до чего дотягивается....</div>
+          <div>- надо прописывапть фильтр по запуску тестов mocha "test/**/*-mocha.test.js"</div>
+          <div>- надо chai для assert</div>
+          <div>- надо продать душу, чтобы сослаться на исходники в тестах</div>
+          <div>- error: Cannot find module '../src/components/trends/Trends'</div>
+          <div>- До сих пор нет решения проблемы</div>
+          <div>- Думаю и другие минусы Jest вытекают</div>
+
+      </div>
+    </div>
+    <div>
+      <h3 style="font-size: 30px">Jest</h3>
+      <div style="font-size: 15px">
+          <div>Пока устанавливаешь узнаёшь о существовании jest.config.js.</div>
+
+          <div style="margin-top: 10px">+ есть удобный jest.config.js для мапинга тестов и настройки</div>
+          <div>+ удобный синтаксис для описания тестов</div>
+          <div>+ не требует много зависимостей</div>
+          <div>+ есть coverage</div>
+          <div>+ удобный интерфейс с отображение где пробелемы при тестах</div>
+          <div>+ больно запускать, но не так критично</div>
+          <div>+ expect and toBe </div>
+
+          <div  style="margin-top: 20px">- нужен jest.config.js</div>
+          <div>- не дружит хорошо с react-scripts test из-за версии jest, которая якобы там есть</div>
+          <div>- support for the experimental syntax 'jsx' isn't currently enabled</div>
+          <div>- не запустить сразу и легко...</div>
+          <div>- нужно .babelrc</div>
+          <div>- чтобы со стилями работал надо moduleNameMapper: { "\\.(css|sass)$": "identity-obj-proxy",}</div>
+          <div>- не эмулирует localStorage...</div>
+          <div>- Не работает с Link компонентами, без Route, поэтому сложно протестировать рендер частичной страницы</div>
+      </div>
+    </div>
+    <div>
+        <h3 style="font-size: 30px">Итоги</h3>
+        <div style="font-size: 15px">
+            <div style="margin-top: 10px">Я бы использовал Jest, так как он больше обкатан и мне знаком. Также его можно сконфигурировать тонко, нежели Mocha. Но как говориться, что то... На самом деле Jest друг человека =) выбор будет за него!</div>
+        </div>
+    </div>
   </body>
 </html>
